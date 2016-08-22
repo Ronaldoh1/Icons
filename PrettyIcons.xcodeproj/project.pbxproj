@@ -37,6 +37,7 @@
 		D32F47AE1C0E2ECB00EB43AE /* eyeball.png in Resources */ = {isa = PBXBuildFile; fileRef = D32F47AB1C0E2ECB00EB43AE /* eyeball.png */; };
 		D32F47AF1C0E2ECB00EB43AE /* star_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = D32F47AC1C0E2ECB00EB43AE /* star_sel.png */; };
 		D32F47B01C0E2ECB00EB43AE /* star_uns.png in Resources */ = {isa = PBXBuildFile; fileRef = D32F47AD1C0E2ECB00EB43AE /* star_uns.png */; };
+		FB7069541D6A8878008C120D /* PrettyIConsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7069531D6A8878008C120D /* PrettyIConsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		D32F47AB1C0E2ECB00EB43AE /* eyeball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeball.png; sourceTree = "<group>"; };
 		D32F47AC1C0E2ECB00EB43AE /* star_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_sel.png; sourceTree = "<group>"; };
 		D32F47AD1C0E2ECB00EB43AE /* star_uns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_uns.png; sourceTree = "<group>"; };
+		FB7069531D6A8878008C120D /* PrettyIConsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyIConsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				D32F477D1C0E2E8B00EB43AE /* Icons */,
 				D32F476B1C0E2E3700EB43AE /* AppDelegate.swift */,
 				D32F476D1C0E2E3700EB43AE /* ViewController.swift */,
+				FB7069531D6A8878008C120D /* PrettyIConsTableViewController.swift */,
 				D32F476F1C0E2E3700EB43AE /* Main.storyboard */,
 				D32F47721C0E2E3700EB43AE /* Assets.xcassets */,
 				D32F47741C0E2E3700EB43AE /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D32F47A81C0E2EA900EB43AE /* Icon.swift in Sources */,
+				FB7069541D6A8878008C120D /* PrettyIConsTableViewController.swift in Sources */,
 				D32F47A91C0E2EA900EB43AE /* IconSet.swift in Sources */,
 				D32F476E1C0E2E3700EB43AE /* ViewController.swift in Sources */,
 				D32F476C1C0E2E3700EB43AE /* AppDelegate.swift in Sources */,
