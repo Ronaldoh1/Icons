@@ -61,6 +61,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pretty Icons" id="edw-ik-OEw"/>
+                    <connections>
+                        <outlet property="tableView" destination="KYl-i5-hhE" id="URU-un-jsk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEA-1C-gex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
