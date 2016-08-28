@@ -22,7 +22,8 @@ class ViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = editButtonItem()
         tableView.allowsSelectionDuringEditing = true
-        
+        tableView.estimatedRowHeight = 67
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     
@@ -69,25 +70,37 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("iconCell", forIndexPath: indexPath)
+        let cell: UITableViewCell
+  
         let iconSet = iconSets[indexPath.section]
         
         if indexPath.row >= iconSet.icons.count && editing {
+        cell = tableView.dequeueReusableCellWithIdentifier("newRowCell", forIndexPath: indexPath)
             //we're in the extra row.
             cell.textLabel?.text = "Add Icon"
             cell.detailTextLabel?.text = nil
             cell.imageView?.image = nil
         } else {
-            let icon = iconSet.icons[indexPath.row]
-            
-            cell.textLabel?.text = icon.title
-            cell.detailTextLabel?.text = icon.subtitle
-            
-            if let iconImage = icon.image {
-                cell.imageView?.image = iconImage
-            } else {
-                cell.imageView?.image = nil
+            cell = tableView.dequeueReusableCellWithIdentifier("iconCell", forIndexPath: indexPath)
+            if let iconCell = cell as? IconTableViewCell {
+                let icon = iconSet.icons[indexPath.row]
+                
+                iconCell.title?.text = icon.title
+                iconCell.detailTextLabel?.text = icon.subtitle
+                
+                if let iconImage = icon.image {
+                    iconCell.iconImage.image = iconImage
+                } else {
+                    iconCell.iconImage?.image = nil
+                }
+                
+                if icon.rating == .Awesome  {
+                    iconCell.favoriteImage.image = UIImage(named: "star_sel.png")
+                } else {
+                    iconCell.favoriteImage.image = UIImage(named: "star_uns.png")
+                }
             }
+       
         }
         return cell
     }
